@@ -18,11 +18,11 @@ SPOTIFY_AUTH_URL = SPOTIFY_AUTH_BASE_URL.format('authorize')
 SPOTIFY_TOKEN_URL = SPOTIFY_AUTH_BASE_URL.format('api/token')
 
 ### Client Keys
-CLIENT_ID = os.environ['client_id']
-CLIENT_SECRET = os.environ['client_secret']
+CLIENT_ID = os.environ.get('CLIENT_ID', '')
+CLIENT_SECRET = os.environ.get('CLIENT_SECRET', '')
 
 ### Server parameters
-CLIENT_SIDE_URL = os.environ['app_url']
+CLIENT_SIDE_URL = os.environ.get('APP_URL', '')
 REDIRECT_URI = "{}/callback/".format(CLIENT_SIDE_URL)
 SCOPE = "playlist-modify-public playlist-modify-private user-read-recently-played user-top-read user-read-private"
 STATE = ""

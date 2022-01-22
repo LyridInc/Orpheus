@@ -1,0 +1,12 @@
+name: orpheus
+description: App Description
+ignoreFiles: .git venv
+modules:
+- name: flask
+  language: python3.9
+  web: flask
+  description: Module description
+  functions:
+  - name: entry
+    entry: entry.py
+    description: the entry point for the function
